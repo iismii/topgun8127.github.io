@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
+    <title>맞춤 당뇨 관리</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700&display=swap&subset=korean" rel="stylesheet"/>
+    <style type="text/css">
+      @font-face { 
+        font-family: 'SCDream'; 
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-7ExtraBold.woff') format('woff'); 
+        font-weight: 700; 
+      }
+      @font-face { 
+        font-family: 'SCDream'; 
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-6Bold.woff') format('woff'); 
+        font-weight: 600;
+      }
+      @font-face {
+        font-family: 'SCDream';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+        font-weight: 400;
+      }
+      html,
+      body,
+      div,
+      span {
+        font-size: 62.5%;
+      }
+      html {
+        width: 100%;
+        display: flex;
+      }
+      body {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        /* height: 100%; */
+        background: #fff;
+        overflow-x: hidden;
+        font-family: Noto Sans KR, 'Noto Sans KR', serif;
+        user-select: none;
+        color: #2A2E47;
+        position: relative;
+      }
+      .header-title {
+        display: inline-flex;
+        width: 100%;
+        margin-top: 6rem;
+        justify-content: center;
+        font-family: 'SCDream', Noto Sans KR, 'Noto Sans KR', serif;
+        font-weight: 700;
+        font-size: 3.6rem;
+      }
+      .header-subtitle {
+        display: inline-flex;
+        width: 100%;
+        margin-top: .8rem;
+        justify-content: center;
+        font-family: 'SCDream', Noto Sans KR, 'Noto Sans KR', serif;
+        font-size: 2.4rem;
+        font-weight: 600;
+        color: #788893;
+      }
+      .title-tag {
+        display: inline-flex;
+        height: 3.1rem;
+        margin-top: 1.6rem;
+      }
+      .main-img {
+        width: 75%;
+        margin-top: 3.2rem;
+      }
+      .msg-wrap {
+        display: flex;
+        justify-content: center;
+        margin-top: .2rem;
+        margin-bottom: 3.2rem;
+        position: relative;
+      }
+      .msg-wrap>.msg-img {
+        display: inline-flex;
+        width: 90%;
+        /* height: fit-content; */
+      }
+      .msg-wrap>.msg {
+        position: absolute;
+        text-align: center;
+        font-size: 1.7rem;
+        width: 81%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
+      .key-features {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        background-color: #F9F9F9;
+        width: 100%;
+        margin: 0;
+        padding: 1.6rem 0;
+      }
+      .list-item {
+        display: inline-flex;
+        flex-direction: row;
+        padding: 2rem 3.2rem 2rem 2rem;
+        position: relative;
+      }
+      .list-item:not(:last-child):after {
+        content: "";
+        background-color: #EBEAEA;
+        height: .1rem;
+        width: calc(100% - 6.4rem);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .num {
+        width: 3.6rem;
+        height: 3.6rem;
+        margin-right: .8rem;
+      }
+      .upper {
+        font-size: 1.8rem;
+        font-weight: 600;
+        letter-spacing: -0.05rem;
+        color: #2A2E47;
+      }
+      .lower {
+        font-size: 1.4rem;
+        margin-top: .6rem;
+        color: #788893;
+        padding-left: .2rem;
+        letter-spacing: -0.03rem;
+      }
+      .recruit {
+        padding: 4rem 3.2rem 3.2rem 3.2rem;
+      }
+      .title {
+        font-size: 2.4rem;
+        font-weight: 700;
+        letter-spacing: -0.05rem;
+        color: #FF7042;
+      }
+      .recruit>.desc {
+        display: inline-flex;
+        flex-direction: column;
+        margin-top: 1.6rem;
+        padding-left: 1.6rem;
+        position: relative;
+        font-size: 1.6rem;
+      }
+      .recruit .desc-row {
+        font-size: 1.6rem;
+        color: #303550;
+      }
+      .recruit .desc-row:first-child {
+        padding-bottom: 1.2rem;
+      }
+      .recruit>.desc:before {
+        content: "";
+        display: inline-flex;
+        height: 100%;
+        width: .3rem;
+        background-color: #FF7042;
+        opacity: 0.5;
+        position: absolute;
+        left: 0;
+      }
+      .bubble-box {
+        background-color: #ededed;
+        margin: 0 3.2rem;
+        border-radius: .8rem;
+        font-size: 1.5rem;
+        color: #303550;
+        padding: 1.4rem 1.6rem;
+      }
+      .benifit-img {
+        height: 3.8rem;
+        margin-top: 4.8rem;
+      }
+      .device-img {
+        height: 28rem;
+        margin-top: 0.3rem;
+        padding-right: 1rem;
+      }
+      .benifit-desc {
+        color: #707070;
+        font-size: 2rem;
+        padding: 0.3rem 3.2rem 1.2rem 3.2rem;
+        text-align: center;
+      }
+      .bubble-box.light {
+        background-color: #F9F9F9;
+        margin: 1.2rem 3.2rem 16rem 3.2rem;
+        border-radius: .8rem;
+        font-size: 1.5rem;
+        color: #788893;
+        padding: 1.4rem 1.6rem;
+        letter-spacing: -0.02rem;
+      }
+      .btn-cta {
+        display: inline-flex;
+        justify-content: center;
+        z-index: 10;
+        position: fixed;
+        bottom: 2.4rem;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #FF7042;
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: 600;
+        padding: 1.8rem 2rem;
+        width: calc(100% - 7.6rem);
+        text-decoration: none;
+        border-radius: 1.6em;
+        text-align: center;
+      }
+    </style>
+  </header>
+
+  <body>
+    <div class="header-title">파프리카케어</div>
+    <div class="header-subtitle">맞춤 당뇨 관리</div>
+    <img
+      class="title-tag"
+      src="https://s3.ap-northeast-2.amazonaws.com/public-seoul.onionsapp.com/notice/main-tag.png"
+      alt="이미지00"
+    />
+    <img
+      class="main-img"
+      src="https://s3.ap-northeast-2.amazonaws.com/public-seoul.onionsapp.com/notice/main-bg.png"
+      alt="이미지01"
+    />
+    <div class="msg-wrap">
+      <img class="msg-img" src="https://s3.ap-northeast-2.amazonaws.com/public-seoul.onionsapp.com/notice/text-bg.png">
+      <div class="msg">
+        약사, 간호사, 영양사로 구성된 <b>전문가</b>들이 한팀이 되어 <b>당신의 일상</b>을 지켜드립니다.
+      </div>
+    </div>
+
+    <ul class="key-features">
+      <li class="list-item">
+        <img class="num" src="https://s3.ap-northeast-2.amazonaws.com/public-seoul.onionsapp.com/notice/num01.png" alt="">
+        <div class="contents">
+          <div class="upper">약, 증상, 음식. 무엇이든 물어보세요!</div>
+        <div class="lower">언제, 어디서나 해당 전문가와 1:1 상담</div>
+        </div>
+      </li>
+      <li class="list-item">
+        <img class="num" src="https://s3.ap-northeast-2.amazonaws.com/public-seoul.onionsapp.com/notice/num02.png" alt="">
+        <div class="contents">
+          <div class="upper">전담 코치와 함께하는 당뇨 관리</div>
+          <div class="lower">360° 다면 케어 (혈당, 복약, 운동, 식이요법 등)</div>
+        </div>
+      </li>
+      <li class="list-item">
+        <img class="num" src="https://s3.ap-northeast-2.amazonaws.com/public-seoul.onionsapp.com/notice/num03.png" alt="">
+        <div class="contents">
+          <div class="upper">당뇨 합병증 예방 및 관리</div>
+          <div class="lower">주기적인 문진과 상담을 통한 근거기반 예후 관리</div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="recruit">
+      <div class="title">사전 체험단 모집 중 !</div>
+      <div class="desc">
+        <div class="desc-row">지금 신청하시면, 공식 런칭 이전에 <b>3달</b>간 미리 서비스를 체험하실 수 있습니다</div>
+        <div class="desc-row"><b>사전 체험자</b>에게만 주어지는 <b>다양한 해택</b>들이 기다리고 있으니,  “<u>사전체험 신청하기</u>”를 눌러 지금 바로 참여하세요.</div>
+      </div>
+    </div>
+
+    <div class="bubble-box">
+      *추첨을 통해 <b>10명의 당첨자</b>에게만 주어지는 체험 기회입니다. 지금 바로 신청하세요!
+    </div>
+
+    <img class="benifit-img" src="https://s3.ap-northeast-2.amazonaws.com/public-seoul.onionsapp.com/notice/benefit.png" alt="">
+    <img class="device-img" src="https://s3.ap-northeast-2.amazonaws.com/public-seoul.onionsapp.com/notice/device.png" alt="">
+    <div class="benifit-desc">아이센스 <b>혈당측정기</b><sup>*</sup> 및<br><b>소모품</b><sup>*</sup> 무료 제공</div>
+    <div class="bubble-box light font-small">
+      혈당측정기<sup>*</sup>: 케어센스® N IoT (LTE 모델)<br>소모품<sup>*</sup>: 스트립, 체혈침
+    </div>
+
+    <a class="btn-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSehZXhB5GTPG0gvhcKEFGDvAVG8cpC6PbKLPC8JCRLxH26ffA/viewform?usp=sf_link">사전체험 신청하기</a>
+
+  </body>
+</html>
